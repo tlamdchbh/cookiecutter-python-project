@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "{{ cookiecutter.package_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+readme = "README.md"
+authors = [
+    {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"},
+]
+requires-python = ">={{ cookiecutter.python_version }}"
+classifiers = [
+    "Programming Language :: Python :: {{ cookiecutter.python_version }}",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Win11",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/username/{{ cookiecutter.project_name }}"
+"Bug Tracker" = "https://github.com/username/{{ cookiecutter.project_name }}/issues"
+
+[tool.ruff]
+target-version = "py{{ cookiecutter.python_version.replace('.', '') }}"
+line-length = 88
+select = ["E", "F", "B", "I", "N", "UP", "ANN", "S", "A", "C4", "PIE", "PT", "RET", "SIM", "ARG", "ERA"]
+ignore = ["ANN101"]
+
+[tool.ruff.isort]
+known-first-party = ["{{ cookiecutter.package_name }}"]
+
+[tool.mypy]
+python_version = "{{ cookiecutter.python_version }}"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B101"]

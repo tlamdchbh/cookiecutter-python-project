@@ -1,0 +1,19 @@
+{
+  "project_name": "python-project",
+  "package_name": "{{ cookiecutter.project_name.lower().replace('-', '_').replace(' ', '_') }}",
+  "description": "A Python project with modern tooling",
+  "author_name": "Your Name",
+  "author_email": "your.email@example.com",
+  "python_version": "3.12",
+  "use_pytest": "y",
+  "use_docker": "y",
+  "license": ["MIT", "BSD-3", "Apache-2.0", "GPL-3.0", "None"],
+  "include_examples": "n",
+  "min_python_version": "3.10",
+  "max_python_version": "3.12",
+  "use_poetry": "n",
+  "open_source": "y",
+  "_copy_without_render": [
+    "*.github/workflows/*.yml"
+  ]
+}
