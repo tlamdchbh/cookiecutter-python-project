@@ -17,9 +17,22 @@ classifiers = [
     "Operating System :: Win11",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "mypy",
+    "ruff",
+    "bandit[toml]",
+    "pre-commit"
+]
+
 [project.urls]
+{% if cookiecutter.use_github == "y" %}
 "Homepage" = "https://github.com/username/{{ cookiecutter.project_name }}"
 "Bug Tracker" = "https://github.com/username/{{ cookiecutter.project_name }}/issues"
+{% else %}
+"Homepage" = "https://example.com/{{ cookiecutter.project_name }}"
+{% endif %}
 
 [tool.ruff]
 target-version = "py{{ cookiecutter.python_version.replace('.', '') }}"

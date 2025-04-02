@@ -13,6 +13,7 @@
   "max_python_version": "3.12",
   "use_poetry": "n",
   "open_source": "y",
+  "use_github": ["y", "n"],
   "_copy_without_render": [
     "*.github/workflows/*.yml"
   ]

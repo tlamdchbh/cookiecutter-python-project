@@ -26,11 +26,17 @@ This project uses modern Python tooling:
 
 ```bash
 # Clone the repository
+{% if cookiecutter.use_github == 'y' %}
 git clone https://github.com/username/{{ cookiecutter.project_name }}.git
+{% else %}
+# clone manually
+{% endif %}
+
+
 cd {{ cookiecutter.project_name }}
 
 # Install dependencies with uv
-uv pip install -e ".[dev]"
+uv pip compile pyproject.toml --all-extras
 
 # Setup pre-commit hooks
 pre-commit install
