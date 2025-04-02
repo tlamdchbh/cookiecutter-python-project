@@ -6,14 +6,21 @@ A modern, minimal Cookiecutter template for Python projects using up-to-date too
 
 Install Cookiecutter (if not already installed):
 
+Cookiecutter must be installed globally:
+
 ```bash
-pip install cookiecutter
+pip install pipx
+pipx install cookiecutter
 ```
 
 Generate a new project:
 
 ```bash
 cookiecutter gh:tlamdchbh/cookiecutter-python-project
+```
+or 
+```bash
+cookiecutter gh:tlamdchbh/cookiecutter-python-project --output-dir [your folder]
 ```
 
 Answer the prompts and a new project folder will be created.
