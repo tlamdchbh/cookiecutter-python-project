@@ -3,8 +3,6 @@
 A modern, minimal Cookiecutter template for Python projects using up-to-date tooling like `uv`, `ruff`, `mypy`,
 `pytest`, `pre-commit`, and `bandit`.
 
-Понял вас. Вот инструкция в стиле `Quick Start`, оформленная в Markdown:
-
 ---
 
 ## 🚀 Quick Start: Cookiecutter Project Setup with `uv`
@@ -116,8 +114,6 @@ pytest
 | Development, execution, and testing | PyCharm          | Use built-in editor, terminal, run/debug, `pytest`, etc.                                             |
 
 ---
-
-Let me know if you'd like a `.bat` script that automates this setup prior to opening the project in PyCharm.
 
 ## 🛠️ Template Features
 
